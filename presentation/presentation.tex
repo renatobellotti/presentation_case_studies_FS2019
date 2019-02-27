@@ -2,10 +2,11 @@
 
 % load packages
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
+\usepackage{graphicx}	% use graphic path
+\usepackage{graphbox}	% needed to align graphics relative to text
 %\usepackage[export]{adjustbox}
-\usepackage{xcolor}
-\usepackage{enumitem}
+\usepackage{xcolor}		% needed for colored text
+\usepackage{enumitem}	% use "plus" and "minus" symbols as bullets in itemize (pro/con lists)
 
 % setup enumitem in way compatible with beamer
 \setitemize{label=\usebeamerfont*{itemize item}%
@@ -20,7 +21,7 @@
 
 % title information
 \title{Non-contact, automated cardiac pulse measurements using video imaging and blind source separation.}
-\author{Ming-Zher Poh, Daniel J. McDuff, Rosanlind W. Picard}
+\author{Ming-Zher Poh, Daniel J. McDuff, Rosalind W. Picard}
 \date{2010}
 
 \begin{document}
@@ -95,6 +96,27 @@
 			\end{itemize}
 		\end{minipage}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Traditional methods are reliable, but they...}
+\pause
+	\begin{itemize}[label=\negativeaspect]
+		\item ... are expensive. \pause
+		\item ... require medical personnel. \pause
+		\item ... are uncomfortable for the patient. \pause
+	\end{itemize}
+	$\Rightarrow$ \textcolor{red}{\textbf{NOT SUITABLE}} for:\\
+	\vspace{0.2cm} \pause
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=0.4\textwidth, align=c]{Sleep-Lab-facilities.jpg}
+		\hspace{2cm}
+		long time studies
+	\end{minipage}\\ \pause
+	\begin{minipage}[t]{\textwidth}
+		\includegraphics[width=0.4\textwidth, align=c]{berggasthaus_aescher.jpg}
+		\hspace{2cm}
+		telemedicine
+	\end{minipage}
 \end{frame}
 
 \end{document}
