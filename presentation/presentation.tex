@@ -1,0 +1,76 @@
+\documentclass{beamer}
+
+% load packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+% setup enumitem in way compatible with beamer
+\setitemize{label=\usebeamerfont*{itemize item}%
+  \usebeamercolor[fg]{itemize item}
+  \usebeamertemplate{itemize item}}
+
+% set directory for the images
+\graphicspath{{../images/}}
+
+% setup theme
+\usetheme{metropolis}
+
+% title information
+\title{Non-contact, automated cardiac pulse measurements using video imaging and blind source separation.}
+\author{Ming-Zher Poh, Daniel J. McDuff, Rosanlind W. Picard}
+\date{2010}
+
+\begin{document}
+
+% own commands
+\newcommand{\mytitle}[1]{{\Large{\underline{#1}}}}
+\newcommand{\positiveaspect}{\textcolor{green}{$\oplus$}}
+\newcommand{\negativeaspect}{\textcolor{red}{$\ominus$}}
+
+% title page
+\frame{\titlepage}
+
+% start slides
+\begin{frame}{Why to measure the pulse?}
+\begin{itemize}
+	\item General health indicator \pause
+	\item Important for therapy of chronic diseases \pause
+	\item Resting heart rate: risk factor of its own\\ \pause
+		Comparable to smoking!\\
+		\includegraphics[width=1cm]{No_Smoking} \pause
+	\item Scientific long term studies (e.~g. sleep studies)\\
+		\includegraphics[width=0.4\textwidth]{Sleep-lab-facilities.jpg}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Heartrate measurement (Traditional)}
+\begin{itemize}
+	\item \mytitle{Electrocardiography}\\
+		\vspace{0.2cm}
+		\includegraphics[width=0.45\textwidth, height=0.3\paperheight]{ekg.jpg}
+		\hfill
+		\includegraphics[width=0.45\textwidth, height=0.3\paperheight]{cardiogram.jpg}\\
+		\noindent
+		\begin{minipage}[t]{0.45\textwidth}
+			\begin{itemize}[label=\positiveaspect]
+				\item measure nerve impulse \pause
+				\item very detailed, reliable \pause
+				\item more than BPM \pause
+			\end{itemize}
+		\end{minipage}
+		\hfill\vline\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\begin{itemize}[label=\negativeaspect]
+				\item cumbersome manual placement \pause
+				\item usually in medical environment \pause
+				\item uncomfortable
+					
+			\end{itemize}
+		\end{minipage}
+\end{itemize}
+\end{frame}
+
+\end{document}

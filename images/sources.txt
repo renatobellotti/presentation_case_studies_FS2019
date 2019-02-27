@@ -1,0 +1,4 @@
+No_Smoking.svg	https://upload.wikimedia.org/wikipedia/commons/6/6b/No_Smoking.svg
+Sleep-lab-facilities.jpg	http://summasleeplab.com/sleep-lab-in-chennai/
+ekg.jpg	https://bilder.t-online.de/b/77/53/83/54/id_77538354/610/tid_da/ein-langzeit-ekg-gibt-aufschluss-ueber-moegliche-herzkrankheiten-.jpg
+cardiogram.jpg	https://www.pexels.com/photo/blur-chart-check-up-curve-415779/
