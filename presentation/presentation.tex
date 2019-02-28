@@ -7,6 +7,7 @@
 %\usepackage[export]{adjustbox}
 \usepackage{xcolor}		% needed for colored text
 \usepackage{enumitem}	% use "plus" and "minus" symbols as bullets in itemize (pro/con lists)
+\usepackage{tcolorbox} 	% draw a highlight box in the ICA slide
 
 % setup enumitem in way compatible with beamer
 \setitemize{label=\usebeamerfont*{itemize item}%
@@ -145,6 +146,32 @@
 			$\Rightarrow$ Measurable using a camera! \pause
 		\item Problem: \textbf{\textcolor{red}{NOISE!}} \pause
 		\item Solution: \textbf{\textcolor{green}{Independent Component Analysis (ICA)}}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Independent Component Analysis (ICA)}
+	\begin{itemize}
+		\item Detects underlying "true" signals in a measured signal\\
+			(blind source separation) \pause
+		\item \underline{Assumed model:}
+			\begin{center}
+			\tcbox{$\vec{x} = A \cdot \vec{s}$,}
+			\end{center} \pause
+			\begin{itemize}
+				\item $\vec{x} = \begin{pmatrix}
+					x_1 \\
+					\vdots \\
+					x_n
+				\end{pmatrix}$ measured (mixed) signal \pause
+				\item $\vec{s} = \begin{pmatrix}
+					s_1 \\
+					\vdots \\
+					s_n
+				\end{pmatrix}$ latent pure signal ("true signal") \pause
+				\item $x_1, \dots, x_n$ \textbf{\textcolor{red}{NOT INDEPENDENT}}\\
+					$s_1, \dots, s_n$ \textbf{\textcolor{green}{INDEPENDENT}} \pause
+				\item ICA computes $W \approx A^{-1}$
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
