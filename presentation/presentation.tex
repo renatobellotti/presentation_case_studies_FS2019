@@ -8,6 +8,7 @@
 \usepackage{xcolor}		% needed for colored text
 \usepackage{enumitem}	% use "plus" and "minus" symbols as bullets in itemize (pro/con lists)
 \usepackage{tcolorbox} 	% draw a highlight box in the ICA slide
+\usepackage{wasysym}	% needed for male/female symbols on experimental validation slide
 
 % setup enumitem in way compatible with beamer
 \setitemize{label=\usebeamerfont*{itemize item}%
@@ -272,6 +273,26 @@
 			\item ... not change more than 12~bpm within 1~s
 		\end{itemize}
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Experimental validation}
+	\begin{minipage}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{setup.png}
+	\end{minipage} \pause
+	\begin{minipage}{0.65\textwidth}
+		\begin{itemize}
+			\item Test persons: 10~\male, 2~\female, age:~18-31, varying skin colour \pause
+			\item Video: 24~bit RGB at 15 FPS \pause
+			\item Compare obtained heart rate to value from BVP sensor \pause
+			\item Performed experiments: \pause
+				\begin{itemize}[label=-]
+					\item $\forall$ test persons:\\ \pause
+						1~min staring at screen, sitting still\\ \pause
+						1~min normal computer interaction \pause
+					\item Once: 1~min three persons sitting still
+				\end{itemize}
+		\end{itemize}
+\end{minipage}
 \end{frame}
 
 \end{document}
