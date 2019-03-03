@@ -36,7 +36,7 @@
 \newcommand{\negativeaspect}{\textcolor{red}{$\ominus$}}
 
 % title page
-\frame{\titlepage}
+\frame[noframenumbering, plain]{\titlepage}
 
 % start slides
 \begin{frame}{Why to measure the pulse?}
@@ -329,6 +329,24 @@
 	\textbf{\Large $\Rightarrow$  Bottom line:}\\ \pause
 	\vspace{0.3cm}
 	\tcbox[colframe=red]{RMSE $\leq~5~\text{bpm}$ compared to BVP sensor!}
+\end{frame}
+
+\begin{frame}{Personal opinion}
+\begin{itemize}
+	\item[\negativeaspect] Still quite a lot "black magic" \pause
+	\item[\negativeaspect] Small sample size \pause
+	\item[\positiveaspect] Very interesting approach \pause
+	\item[\positiveaspect] Potential to improve medical support in poor/remote locations
+\end{itemize}
+\end{frame}
+
+\begin{frame}[noframenumbering, plain]
+	\begin{center}
+	\textbf{\Huge Questions?}\\
+	\begin{figure}
+		\includegraphics[width=0.6\textwidth]{doctor_clipart.jpg}
+	\end{figure}
+	\end{center}
 \end{frame}
 
 \end{document}
