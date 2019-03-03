@@ -8,3 +8,6 @@ berggasthaus_aescher.jpg	https://img.myswitzerland.com/mys/n64800/images/buehne/
 snake.jpg	https://www.ryerson.ca/childrenslit/images/hatsss.jpghttps://www.ryerson.ca/childrenslit/images/hatsss.jpg
 OpenCV_Logo.png	http://1.bp.blogspot.com/-yvrV6MUueGg/ToICp0YIDPI/AAAAAAAAADg/YKNtJPfx-H8/s1600/OpenCV_Logo.png
 doctor_clipart.jpg	http://images.clipartpanda.com/woman-doctor-clipart-doctor-clip-art-6.jpg
+data-processing.jpg	http://www.enterprisefeatures.com/wp-content/uploads/2013/04/data-processing.jpg
+webcam.jpg	https://revealingcomputer.files.wordpress.com/2015/07/webcam.jpg
+pulse_measurement.jpg	https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fpng_detail%2F18%2F09%2F10%2Fpngtree-cartoon-pulse-measurement-png-clipart_2247938.jpg&f=1
