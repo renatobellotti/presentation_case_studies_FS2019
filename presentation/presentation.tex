@@ -9,6 +9,8 @@
 \usepackage{enumitem}	% use "plus" and "minus" symbols as bullets in itemize (pro/con lists)
 \usepackage{tcolorbox} 	% draw a highlight box in the ICA slide
 \usepackage{wasysym}	% needed for male/female symbols on experimental validation slide
+\usepackage{booktabs}	% needed for results table at the end
+\usepackage{colortbl}	% color rows of a table
 
 % setup enumitem in way compatible with beamer
 \setitemize{label=\usebeamerfont*{itemize item}%
@@ -255,7 +257,10 @@
 \begin{frame}{Algorithm}
 \textbf{\Large 4.) Get independent true signals}
 \begin{figure}
-	\includegraphics[width=0.5\textwidth]{paper_ica.png}
+	\begin{overprint}
+	\onslide<1>\centering\includegraphics[width=0.5\textwidth]{paper_ica.png}
+	\onslide<2>\centering\includegraphics[width=0.5\textwidth]{paper_ica_marked.png}
+	\end{overprint}
 \end{figure}
 \end{frame}
 
@@ -265,11 +270,11 @@
 	\item Apply FFT to get power spectrum:
 		\begin{figure}
 			\includegraphics[height=0.3\paperheight]{paper_power_spectrum.png}
-		\end{figure}
-	\item Select highest power peak of the spectrum
-	\item Include constraints: Heart rate must ...
+		\end{figure} \pause
+	\item Select highest power peak of the spectrum \pause
+	\item Include constraints: Heart rate must ... \pause
 		\begin{itemize}[label=-]
-			\item ... be in range [45, 240]~bpm
+			\item ... be in range [45, 240]~bpm \pause
 			\item ... not change more than 12~bpm within 1~s
 		\end{itemize}
 \end{itemize}
@@ -293,6 +298,37 @@
 				\end{itemize}
 		\end{itemize}
 \end{minipage}
+\end{frame}
+
+\begin{frame}{Results}
+\begin{figure}
+	\begin{overprint}
+	\onslide<1>\centering\includegraphics[width=\textwidth]{screenshot_of_results.png}
+	\onslide<2>\centering\includegraphics[width=\textwidth]{screenshot_of_results_marked.png}
+	\end{overprint}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Results}
+	\begin{table}\centering
+	\makebox[0.7\textwidth][c]{%
+	\begin{tabular}{@{}rrrrrr@{}}\toprule
+	 & \multicolumn{2}{c}{Sitting still} & \phantom{abc} & \multicolumn{2}{c}{With movement artifacts}\\
+	 \cmidrule{2-3} \cmidrule{5-6}
+	 Statistics & Before ICA & After ICA & & Before ICA & After ICA\\
+	 \midrule
+	 \rowcolor{lightgray}
+	 Mean bias (bpm) & 0.09 & -0.05 & & 8.16 & 0.64\\
+	 SD of bias (bpm) & 6.01 & 2.29 & & 17.58 & 4.59\\
+	 \rowcolor{lightgray}
+	 RMSE & 6.00 & 2.29 & & 19.36 & 4.63\\
+	 \bottomrule
+	\end{tabular}}
+	\end{table} \pause
+	
+	\textbf{\Large $\Rightarrow$  Bottom line:}\\ \pause
+	\vspace{0.3cm}
+	\tcbox[colframe=red]{RMSE $\leq~5~\text{bpm}$ compared to BVP sensor!}
 \end{frame}
 
 \end{document}
