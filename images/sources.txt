@@ -6,3 +6,4 @@ bvp_sensor.jpg	https://static1.squarespace.com/static/56530999e4b0991ab31b67b1/t
 pulse_oximetry_sketch.jpg	https://cdn.instructables.com/FMB/63TF/J1GP5SW4/FMB63TFJ1GP5SW4.LARGE.jpg
 berggasthaus_aescher.jpg	https://img.myswitzerland.com/mys/n64800/images/buehne/aescher.jpg
 snake.jpg	https://www.ryerson.ca/childrenslit/images/hatsss.jpghttps://www.ryerson.ca/childrenslit/images/hatsss.jpg
+OpenCV_Logo.png	http://1.bp.blogspot.com/-yvrV6MUueGg/ToICp0YIDPI/AAAAAAAAADg/YKNtJPfx-H8/s1600/OpenCV_Logo.png

@@ -202,4 +202,62 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Algorithm}
+\textbf{\Large 1.) Face detection} (in each frame)\\
+	\vspace{0.2cm}
+	\begin{minipage}{\textwidth}
+	\includegraphics[width=0.5\textwidth, align=c]{face_detection.png} \pause
+	\hfill
+	\includegraphics[width=0.3\textwidth, align=c]{OpenCV_Logo.png} \pause
+	\end{minipage}\\
+	\vspace{0.5cm}
+	Pretrained Viola-Jones model provided by OpenCV\\ \pause
+	\vspace{0.5cm}
+	$\Rightarrow$ Region of interest (ROI)
+\end{frame}
+
+\begin{frame}{Algorithm}
+\textbf{\Large 2.) Obtaining the mixed signals} (in each frame)
+	Spatial average over ROI in each colour channel
+	\begin{figure}
+	\includegraphics[height=0.6\paperheight, align=c]{video_to_trace.png}
+	\end{figure}
+	$\Rightarrow x_1(t), x_2(t), x_3(t)$
+\end{frame}
+
+\begin{frame}{Algorithm}
+\textbf{\Large 3.) Normalise}
+\begin{itemize}
+	\item Within a moving 30~s - window:\\
+		Calculate $\mu_i, \sigma_i$ \pause
+	\item Normalise:
+		\begin{equation*}
+			x'_i = \frac{x_i(t) - \mu_i}{\sigma_i}, i = 1, 2, 3
+		\end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Algorithm}
+\textbf{\Large 4.) Get independent true signals}
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{paper_ica.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Algorithm}
+\textbf{\Large 5.) Obtain heart rate}
+\begin{itemize}
+	\item Apply FFT to get power spectrum:
+		\begin{figure}
+			\includegraphics[height=0.3\paperheight]{paper_power_spectrum.png}
+		\end{figure}
+	\item Select highest power peak of the spectrum
+	\item Include constraints: Heart rate must ...
+		\begin{itemize}[label=-]
+			\item ... be in range [45, 240]~bpm
+			\item ... not change more than 12~bpm within 1~s
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
 \end{document}
